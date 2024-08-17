@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Lift Simulation</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>Lift Simulation</h1>
+      </div>
+      <div class="container">
+        <div class="floor-container">
+          <div class="floor" id="floor-4">
+            <div>
+              <button class="down-button" onclick="callLift(4, 'down')">
+                Down
+              </button>
+            </div>
+          </div>
+          <div class="floor-name">Floor 4</div>
+        </div>
+        <div class="floor-container">
+          <div class="floor" id="floor-3">
+            <div>
+              <button class="up-button" onclick="callLift(3, 'up')">Up</button>
+            </div>
+            <div>
+              <button class="down-button" onclick="callLift(3, 'down')">
+                Down
+              </button>
+            </div>
+          </div>
+          <div class="floor-name">Floor 3</div>
+        </div>
+        <div class="floor-container">
+          <div class="floor" id="floor-2">
+            <div>
+              <button class="up-button" onclick="callLift(2, 'up')">Up</button>
+            </div>
+            <div>
+              <button class="down-button" onclick="callLift(2, 'down')">
+                Down
+              </button>
+            </div>
+          </div>
+          <div class="floor-name">Floor 2</div>
+        </div>
+        <div class="floor-container">
+          <div class="floor" id="floor-1">
+            <div>
+              <button class="up-button" onclick="callLift(1, 'up')">Up</button>
+            </div>
+          </div>
+          <div class="floor-name">Floor 1</div>
+        </div>
+        <div class="lift-container">
+          <div class="lift lift-left" id="lift-1" style="bottom: 0">
+            <div class="lift-doors">
+              <div class="lift-door lift-door-left"></div>
+              <div class="lift-door lift-door-right"></div>
+            </div>
+          </div>
+          <div class="lift lift-right" id="lift-2" style="bottom: 0">
+            <div class="lift-doors">
+              <div class="lift-door lift-door-left"></div>
+              <div class="lift-door lift-door-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
