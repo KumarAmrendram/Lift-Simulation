@@ -38,11 +38,13 @@ const moveLiftToFloor = (lift, calledFloor) => {
   lift.isMoving = true;
   const liftElement = document.getElementById(lift.id);
   const targetHeight = calculateTargetHeight(calledFloor);
+  const floorsToTravel = Math.abs(calledFloor - lift.currentFloor);
+  const travelTime = floorsToTravel * 2000; // 2 seconds per floor
 
   operateDoors(lift, "close");
 
   setTimeout(() => {
-    liftElement.style.transition = "bottom 2.5s";
+    liftElement.style.transition = `bottom ${travelTime / 1000}s`;
     liftElement.style.bottom = `${targetHeight}px`;
 
     setTimeout(() => {
@@ -55,7 +57,7 @@ const moveLiftToFloor = (lift, calledFloor) => {
       setTimeout(() => {
         operateDoors(lift, "close");
       }, 2500); // Doors remain open for 2.5 seconds
-    }, 2500); // Time to move to the target floor
+    }, travelTime); // Time to move to the target floor
   }, 500); // Time for doors to close before moving
 };
 

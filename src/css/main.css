@@ -16,6 +16,11 @@ body {
     margin: 0 auto;
 }
 
+.text-center {
+    text-align: center;
+    padding: 10px 0;
+}
+
 .floor-container {
     display: flex;
     align-items: center;
@@ -36,7 +41,7 @@ body {
 .down-button {
     font-size: 20px;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
 }
@@ -129,4 +134,51 @@ body {
 
 .lift.close .lift-door-right {
     transform: translateX(0);
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .floor {
+        width: 70%;
+    }
+
+    .lift-container {
+        width: 350px;
+    }
+
+    .lift-left {
+        left: 50px;
+    }
+
+    .lift-right {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .floor {
+        width: 70%;
+    }
+
+    .lift-container {
+        width: 280px;
+    }
+
+    .lift-left {
+        left: 50px;
+    }
+
+    .lift-right {
+        right: 50px;
+    }
 }
